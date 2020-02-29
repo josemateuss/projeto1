@@ -5,6 +5,7 @@ Primeiro projeto com Spring Framework e Spring Boot
 ## Tecnologias Utilizadas
 * Spring Initializr
 * Spring Tools Suite
+* JPA
 * MySQL
 * Thymeleaf
 
