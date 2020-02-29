@@ -15,21 +15,36 @@ public class DataInitializr implements ApplicationListener<ContextRefreshedEvent
 
 	@Autowired
 	UserRepository userRepository;
-	
-	
+
 	@Override
 	public void onApplicationEvent(ContextRefreshedEvent event) {
-		
+
 		List<User> users = userRepository.findAll();
-		
-		if(users.isEmpty()) {
-			
-			User user = new User();
-			user.setName("José Mateus");
-			user.setEmail("mateus.18.santos@gmail.com");
-		
-			userRepository.save(user);
+
+		if (users.isEmpty()) {
+
+			createUser("José Mateus", "mateus.18.santos@gmail.com");
+			createUser("Geane Cavalcante", "geane@gmail.com");
+
+			// User user = userRepository.getOne((long) 2); //coverter o int pra long ou usa '2L'
+			// user.setName("Geane Pereira");
+
+			// userRepository.save(user);
+			// System.out.println(user.getName());
+
 		}
+
+		User user;
+		// user = userRepository.findByHalfName("Jo");
+		user = userRepository.findByEmail("mateus.18.santos@gmail.com");
+		System.out.println(user.getName());
+
+	}
+
+	public void createUser(String name, String email) {
+
+		User user = new User(name, email);
+		userRepository.save(user);
 	}
 
 }
