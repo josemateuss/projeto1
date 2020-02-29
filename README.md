@@ -7,3 +7,5 @@ Primeiro projeto com Spring Framework e Spring Boot
 * JPA
 * Spring Tools Suite
 * Thymeleaf
+
+José Mateus Pereira Santos – [Linkedin](https://www.linkedin.com/in/josé-mateus-937560106/) – mateus.18.santos@gmail.com
