@@ -1,10 +1,10 @@
 package mateus.projeto1.config;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
-import org.springframework.stereotype.Component;
 
-@Component
+@Configuration
 @Profile("prod")
 public class ProdConfig {
 	
