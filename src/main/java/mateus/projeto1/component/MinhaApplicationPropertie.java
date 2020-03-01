@@ -11,9 +11,13 @@ public class MinhaApplicationPropertie implements ApplicationListener<ContextRef
 	@Value("${minha.application}")
 	private String minhaApplicationProp;
 	
+	@Value("${my.example}")
+	private String exampleYml;
+	
 	@Override
 	public void onApplicationEvent(ContextRefreshedEvent event) {
 		System.out.println(minhaApplicationProp);
+		System.out.println(exampleYml);
 	}
 	
 	
