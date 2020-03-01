@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>Primeiro Form com HTTP e Thymeleaf</title>
+   </head>
+   <body>
+		<form action="#" th:action="@{/truck}" th:object="${truck}" method="post">
+			<label>Nome:</label>
+			<input type="text" th:field="*{name}">
+			<br>
+			<label>Cor:</label>
+			<input type="text" th:field="*{color}">
+			
+			<input type="submit" value="Enviar Formulário">
+			
+		</form>
+   </body>
+</html>
