@@ -1,6 +1,6 @@
 package mateus.projeto1.entity;
 
-import java.util.Set;
+//import java.util.Set;
 
 import javax.persistence.*;
 
@@ -13,16 +13,20 @@ public class User {
 	private String name;
 	private String email;
 
-	@ManyToMany
-	private Set<Role> roles;
+	/*@ManyToMany
+	private Set<Role> roles;*/
+	
+	@ManyToOne
+	private Role role;
 
 	public User() {
 	}
 
-	public User(String name, String email) {
+	public User(String name, String email, Role role) {
 		super();
 		this.name = name;
 		this.email = email;
+		this.role = role;
 	}
 
 	public Long getId() {
@@ -47,6 +51,14 @@ public class User {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public Role getRole() {
+		return role;
+	}
+
+	public void setRole(Role role) {
+		this.role = role;
 	}
 
 }

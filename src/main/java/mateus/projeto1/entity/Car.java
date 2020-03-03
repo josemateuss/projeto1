@@ -7,31 +7,27 @@ import mateus.projeto1.repository.Vehicle;*/
 
 /*@Component
 @Qualifier("carBean")*/
-public class Car /*implements Vehicle*/ {
+public class Car /* implements Vehicle */ {
 
-	/*@Override
-	public void start() {
-		System.out.println("Iniciar carro");
-	}
+	/*
+	 * @Override public void start() { System.out.println("Iniciar carro"); }
+	 * 
+	 * @Override public void stop() { System.out.println("Parar carro"); }
+	 */
 
-	@Override
-	public void stop() {
-		System.out.println("Parar carro");
-	}*/
-	
 	private String name;
 	private String color;
-	
+
 	public Car() {
-		
+
 	}
-	
+
 	public Car(String name, String color) {
 		super();
 		this.name = name;
 		this.color = color;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
