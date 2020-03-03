@@ -34,18 +34,18 @@ public class DataInitializr implements ApplicationListener<ContextRefreshedEvent
 			/*createRole("Professor");
 			createRole("Student");*/
 			
-			Role role = new Role();
+			Role role1 = new Role();
 			Role role2 = new Role();
 			
-			role.setName("Professor");
-			role.setStatus(StatusRole.ACTIVE);
+			role1.setName("Professor");
+			role1.setStatus(StatusRole.ACTIVE);
 			role2.setName("Student");
 			role2.setStatus(StatusRole.INACTIVE);
 			
-			this.roleRepository.save(role);
+			this.roleRepository.save(role1);
 			this.roleRepository.save(role2);			
 
-			createUser("José Mateus", "mateus.18.santos@gmail.com", role);
+			createUser("José Mateus", "mateus.18.santos@gmail.com", role1);
 			createUser("Geane Cavalcante", "geane@gmail.com", role2);
 
 			// User user = userRepository.getOne((long) 2); //coverter o int pra long ou usa

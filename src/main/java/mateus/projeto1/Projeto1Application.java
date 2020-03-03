@@ -25,7 +25,7 @@ public class Projeto1Application {
 }
 
 /* 
-Annotations
+Annotations:
 @Component --> Indica que a classe é um componente e será criado como se fosse um Bean.
 @Controller --> Indica que a classe tem um papel no Spring MVC como a controladora.
 @RestController --> É uma classe que herda da anootation @Controller e ainda add @ReponseBody.

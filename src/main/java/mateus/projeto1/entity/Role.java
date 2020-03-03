@@ -12,7 +12,13 @@ public class Role {
 	
 	@Enumerated(EnumType.STRING) //pega o valor do texto
 	private StatusRole status;
- 
+	
+	public Role(String name, StatusRole status) {
+		super();
+		this.name = name;
+		this.status = status;
+	}
+
 	public Role() {
 	}
 
